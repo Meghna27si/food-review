@@ -1,0 +1,108 @@
+# Food Recognition and Calorie Estimation Model
+
+This repository contains a project focused on developing a machine learning model that can accurately recognize food items from images and estimate their calorie content. The goal is to enable users to track their dietary intake and make informed food choices through an intuitive, user-friendly interface.
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Dataset](#dataset)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Model Training](#model-training)
+- [Results](#results)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Introduction
+
+Maintaining a balanced diet is crucial for health and wellness. This project aims to facilitate dietary tracking by using a convolutional neural network (CNN) to classify food items from images and estimate their calorie content. By leveraging image recognition and calorie estimation, users can easily monitor their food intake.
+
+## Features
+
+- **Food Image Recognition**: Identifies various food items from images with high accuracy.
+- **Calorie Estimation**: Estimates the calorie content of the identified food items.
+- **User-Friendly Interface**: Simple and intuitive UI for uploading images and receiving instant feedback.
+- **Comprehensive Dataset**: Trained on a diverse dataset of food images to ensure robust performance.
+
+## Dataset
+
+The model is trained on a combination of publicly available food image datasets, including:
+
+- [Food-101 Dataset](https://www.vision.ee.ethz.ch/datasets_extra/food-101/)
+- [UECFOOD-256 Dataset](http://foodcam.mobi/dataset256_2.html)
+
+These datasets provide a wide variety of food images labeled with corresponding categories and nutritional information.
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/food-recognition-calorie-estimation.git
+   cd food-recognition-calorie-estimation
+   ```
+
+2. Create and activate a virtual environment:
+
+   ```bash
+   python3 -m venv env
+   source env/bin/activate  # On Windows, use `env\Scripts\activate`
+   ```
+
+3. Install the required dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Usage
+
+1. To use the model for food recognition and calorie estimation, follow these steps:
+
+2. Ensure your dataset is organized in the specified format (e.g., separate folders for each food category).
+
+3. Run the script to load the model and start the application:
+
+   ```bash
+   python app.py
+   ```
+
+4. Open the application in your web browser and upload a food image to receive predictions.
+
+## Model Training
+
+To train the model from scratch or fine-tune it on a new dataset:
+
+1. Prepare the dataset:
+
+   ```bash
+   python prepare_dataset.py --data_dir path/to/dataset
+   ```
+
+2. Train the model:
+
+   ```bash
+   python train.py --epochs 50 --batch_size 32 --data_dir path/to/dataset
+   ```
+
+3. Save the trained model:
+
+   ```bash
+   python save_model.py --output_dir path/to/save/model
+   ```
+
+## Results
+
+The model achieves high accuracy in recognizing food items and provides reliable calorie estimates. Detailed performance metrics and visualizations can be found in the `results` directory.
+
+## Contributing
+
+We welcome contributions to improve this project! Please read the [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines on how to contribute.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+---
+AUTHOR-- Meghna Si
